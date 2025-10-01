@@ -1,73 +1,37 @@
-# React + TypeScript + Vite
+以下の文章をmd形式で書いて。「・」はタイトルです。「-」はサブタイトル
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+・geminiに聞きながら作ってみました。
 
-Currently, two official plugins are available:
+環境
+windows 11
+react vite nodejs tsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+code
+Code
+download
+content_copy
+expand_less
+npm run dev
 
-## React Compiler
+・少し理解できたこと
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<ul>
+<li>CSS を使うと、動的なアニメーショングラデーションを作ることができる。</li>
+<li>classname は、CSSなどの使用、特定して適応することができる</li>
+<li>「<>」はフラグメントということ。意味は、webサイト上で能力を持たせることができる(<li>は箇条書きにできる)</li>
+<li>viteは、開発環境を構築するためのとても便利なツールである。いちいち自分らがjsonファイルを書き換えなくても自動的にやってくれたりとか、とにかくすぐ開発に移行できる</li>
+</ul>
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+・わからないところ
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+<ul>
+<li>とりあえずほとんどわかってないということ</li>
+<li>これから、導入するであろうsoliduiの導入方法がわからない</li>
+<li>アロー関数が便利ということはわかっているが、どういうときに有効なのかわからない。使うタイミングがわからない</li>
+</ul>
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+・まとめ
+とにかく、作れたことはうれしいし、どんどん改良していきたいと思いましたが、<b>圧倒的に勉強不足</b>知らないことのほうが多くて、多分会議の話についていけない気がする。
+合間をぬって勉強したいと思います。おそらくエンジニアを目指すうえで、webサイト開発は、避けて通れないと思いますので。
