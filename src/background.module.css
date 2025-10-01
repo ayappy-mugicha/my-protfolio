@@ -1,0 +1,30 @@
+@keyframes background-rote {
+    0%{background: #e60000}
+    14%{background: #f39800}
+    28%{background: #fff100}
+    42%{background: #009944}
+    56%{background: #0068b7}
+    70%{background: #1d2088}
+    85%{background: #920783}
+    100%{background: #e60000}
+}
+
+.background {
+    position: fixed;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+  /* background: conic-gradient(
+  to right,
+  red, orange, yellow, green, blue, indigo, violet, 
+    red, orange, yellow, green, blue, indigo, violet 
+  ); */
+
+  background-size: 400% 100%;
+  animation: background-rote 10s ease infinite;
+
+}
